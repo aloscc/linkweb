@@ -5,6 +5,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {APP_BASE_HREF} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
+import {authInterceptorProviders} from './core/helpers/auth.interceptor';
 
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatButtonModule} from '@angular/material/button';
@@ -102,7 +103,7 @@ export class MaterialModule {}
     FixedpluginModule,
   ],
   declarations: [AppComponent, AdminLayoutComponent, AuthLayoutComponent],
-  providers: [MatNativeDateModule],
+  providers: [MatNativeDateModule, authInterceptorProviders],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
