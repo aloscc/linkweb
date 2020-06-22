@@ -3,7 +3,7 @@ import PerfectScrollbar from 'perfect-scrollbar';
 
 declare const $: any;
 
-//Metadata
+// Metadata
 export interface RouteInfo {
   path: string;
   title: string;
@@ -20,8 +20,30 @@ export interface ChildrenItems {
   type?: string;
 }
 
-//Menu Items
+// Menu Items
 export const ROUTES: RouteInfo[] = [
+  {
+    path: '/users',
+    title: 'Usuarios',
+    type: 'sub',
+    icontype: 'dashboard',
+    collapse: 'users',
+    children: [
+      {path: 'user-list', title: 'Lista', ab: 'L'},
+      {path: 'user-create', title: 'Crear Usuario', ab: 'CU'},
+    ],
+  },
+  {
+    path: '/events',
+    title: 'Eventos',
+    type: 'sub',
+    icontype: 'dashboard',
+    collapse: 'events',
+    children: [
+      {path: 'event-list', title: 'Lista', ab: 'L'},
+      {path: 'event-create', title: 'Crear Evento', ab: 'CE'},
+    ],
+  },
   {
     path: '/dashboard',
     title: 'Dashboard',

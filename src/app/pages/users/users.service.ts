@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {User} from '../../core/models/user';
+import {CreateUserDto, UpdateUserDto, ReadUserDto} from './dto/';
 import {environment} from '../../../environments/environment';
 import {Observable} from 'rxjs';
 
@@ -13,6 +13,7 @@ const httpOptions = {
 })
 export class UsersService {
   constructor(private http: HttpClient) {}
+
   getUsers(): Observable<any> {
     return this.http.get(`${baseUrl}/users`);
   }
@@ -21,15 +22,19 @@ export class UsersService {
     return this.http.get(`${baseUrl}/users/${userId}`);
   }
 
-  postUser(user: User): Observable<any> {
-    return this.http.post(`${baseUrl}/users`, user, httpOptions);
+  createUser(user: CreateUserDto): Observable<any> {
+    return this.http.post(`${baseUrl}/auth/signup`, user, httpOptions);
   }
 
-  udpateUser(user: Partial<User>): Observable<any> {
-    return this.http.patch(`${baseUrl}/users`, user, httpOptions);
+  udpateUser(userId: number, user: Partial<UpdateUserDto>): Observable<any> {
+    return this.http.patch(`${baseUrl}/users/${userId}`, user, httpOptions);
   }
 
   deleteUser(userId: number): Observable<any> {
     return this.http.delete(`${baseUrl}/users/${userId}`);
+  }
+
+  fileUpload(obj: any): Observable<any> {
+    return this.http.post(`${baseUrl}/file-upload`, obj, httpOptions);
   }
 }

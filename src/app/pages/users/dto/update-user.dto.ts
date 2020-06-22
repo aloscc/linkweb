@@ -1,13 +1,15 @@
-export class User {
+export class UpdateUserDto {
   constructor(
-    public userId: number = 0,
     public roleId: number = 0,
     public companyId: number = 0,
+    public username: string = '',
+    public password: string = '',
     public name: string = '',
     public lastName: string = '',
     public email: string = '',
     public phone: string = '',
-    public username: string = '',
-    public password: string = '',
+    public photo: string = '',
+    public position: string = '',
+    public bio: string = '',
   ) {}
 }

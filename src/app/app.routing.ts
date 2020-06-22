@@ -18,8 +18,16 @@ export const AppRoutes: Routes = [
         loadChildren: './pages/dashboard/dashboard.module#DashboardModule',
       },
       {
-        path: '',
-        loadChildren: './pages/userpage/user.module#UserModule',
+        path: 'profile',
+        loadChildren: './pages/profile/profile.module#ProfileModule',
+      },
+      {
+        path: 'users',
+        loadChildren: './pages/users/users.module#UsersModule',
+      },
+      {
+        path: 'events',
+        loadChildren: './pages/events/events.module#EventsModule',
       },
       {
         path: '',

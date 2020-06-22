@@ -1,4 +1,4 @@
-export class User {
+export class ProfileDto {
   constructor(
     public userId: number = 0,
     public roleId: number = 0,

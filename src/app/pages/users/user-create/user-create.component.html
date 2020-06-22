@@ -1,0 +1,183 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header card-header-icon card-header-rose">
+            <div class="card-icon">
+              <i class="material-icons">perm_identity</i>
+            </div>
+            <h4 class="card-title">
+              Crear Usuario -
+            </h4>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="register" (ngSubmit)="onSubmit()">
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Company</label>
+                    <input
+                      formControlName="companyId"
+                      type="text"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Rol</label>
+                    <input
+                      formControlName="roleId"
+                      type="text"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Posición</label>
+                    <input
+                      formControlName="position"
+                      type="text"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Fist Name</label>
+                    <input
+                      formControlName="name"
+                      type="text"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Last Name</label>
+                    <input
+                      formControlName="lastName"
+                      type="text"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Username</label>
+                    <input
+                      formControlName="username"
+                      type="text"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Password</label>
+                    <input
+                      formControlName="password"
+                      type="password"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Email</label>
+                    <input
+                      formControlName="email"
+                      type="text"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Telefono</label>
+                    <input
+                      formControlName="phone"
+                      type="text"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Foto</label>
+                    <input
+                      formControlName="photo"
+                      type="file"
+                      class="form-control"
+                      (change)="onFileChange($event)"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Biografia </label>
+                    <textarea
+                      formControlName="bio"
+                      type="text"
+                      class="form-control"
+                      rows="5"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="row"></div>
+              <button
+                mat-raised-button
+                type="submit"
+                class="btn btn-rose pull-right"
+              >
+                Crear
+              </button>
+              <div class="clearfix"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <legend>Avatar</legend>
+        <div
+          class="fileinput fileinput-new text-center"
+          data-provides="fileinput"
+        >
+          <div class="fileinput-new thumbnail img-circle">
+            <img id="photo" src="./assets/img/placeholder.jpg" alt="..." />
+          </div>
+          <div
+            class="fileinput-preview fileinput-exists thumbnail img-circle"
+          ></div>
+          <div>
+            <span class="btn btn-round btn-rose btn-file">
+              <span class="fileinput-new">Add Photo</span>
+              <span class="fileinput-exists">Change</span>
+              <input type="file" (change)="onFileChange($event)" />
+            </span>
+            <br />
+            <a
+              (click)="deletePhoto()"
+              class="btn btn-danger btn-round fileinput-exists"
+              data-dismiss="fileinput"
+              ><i class="fa fa-times"></i>Remove</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
