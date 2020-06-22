@@ -2,14 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {UsersService} from '../users.service';
 import {CreateUserDto} from '../dto/create-user.dto';
 import {ObjectCompare} from '../../../core/helpers/object-compare';
-import {
-  FormControl,
-  FormGroupDirective,
-  NgForm,
-  Validators,
-  FormGroup,
-} from '@angular/forms';
-import {FormBuilder, AbstractControl} from '@angular/forms';
+import {FormBuilder, FormGroup,} from '@angular/forms';
 
 @Component({
   selector: 'app-user-cmp',

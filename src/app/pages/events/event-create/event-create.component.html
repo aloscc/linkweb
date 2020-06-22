@@ -1,1 +1,140 @@
-<p>event-create works!</p>
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header card-header-icon card-header-rose">
+                        <div class="card-icon">
+                            <i class="material-icons">perm_identity</i>
+                        </div>
+                        <h4 class="card-title">
+                            Crear Evento -
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <form [formGroup]="register" (ngSubmit)="onSubmit()">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Event Type ID</label>
+                                        <input
+                                                formControlName="eventTypeId"
+                                                type="text"
+                                                class="form-control"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">World ID</label>
+                                        <input
+                                                formControlName="worldId"
+                                                type="text"
+                                                class="form-control"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Name</label>
+                                        <input
+                                                formControlName="name"
+                                                type="text"
+                                                class="form-control"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Short description</label>
+                                        <input
+                                                formControlName="shortDescription"
+                                                type="text"
+                                                class="form-control"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Long Description</label>
+                                        <input
+                                                formControlName="longDescription"
+                                                type="text"
+                                                class="form-control"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Visibility</label>
+                                        <input
+                                                formControlName="visibility"
+                                                type="text"
+                                                class="form-control"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Start Date</label>
+                                        <input
+                                                formControlName="startDate"
+                                                type="text"
+                                                class="form-control"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">End Date</label>
+                                        <input
+                                                formControlName="endDate"
+                                                type="text"
+                                                class="form-control"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Organizer Url</label>
+                                        <input
+                                                formControlName="organizerUrl"
+                                                type="text"
+                                                class="form-control"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Capacity</label>
+                                        <input
+                                                formControlName="capacity"
+                                                type="text"
+                                                class="form-control"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button
+                                    mat-raised-button
+                                    type="submit"
+                                    class="btn btn-rose pull-right">
+                                Crear
+                            </button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

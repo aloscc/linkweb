@@ -6,10 +6,16 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {EventComponent} from './event/event.component';
 import {EventListComponent} from './event-list/event-list.component';
 import {EventsRoutes} from './events.routing';
-import { EventCreateComponent } from './event-create/event-create.component';
+import {EventCreateComponent} from './event-create/event-create.component';
 
 @NgModule({
-  declarations: [EventComponent, EventListComponent, EventCreateComponent],
-  imports: [CommonModule, RouterModule.forChild(EventsRoutes), FormsModule],
+    declarations: [EventComponent, EventListComponent, EventCreateComponent],
+    imports: [
+        CommonModule,
+        RouterModule.forChild(EventsRoutes),
+        FormsModule,
+        ReactiveFormsModule,
+    ],
 })
-export class EventsModule {}
+export class EventsModule {
+}
