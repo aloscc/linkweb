@@ -111,4 +111,10 @@ export class EventListComponent implements OnInit {
         $('.card .material-datatables label').addClass('form-group');
     }
 
+
+    deleteEvent(event) {
+        this.eventsService.deleteEvent(event.eventId).subscribe(() => {
+        });
+    }
+
 }
