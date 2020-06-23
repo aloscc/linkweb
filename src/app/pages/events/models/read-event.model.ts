@@ -1,4 +1,5 @@
-export class UpdateEventModel {
+export class ReadEventModel {
+  eventId: number;
   eventTypeId: number;
   worldId: number;
   name: string;

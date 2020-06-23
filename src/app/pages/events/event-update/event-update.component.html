@@ -8,11 +8,11 @@
               <i class="material-icons">perm_identity</i>
             </div>
             <h4 class="card-title">
-              Crear Evento -
+              Actualizar Evento -
             </h4>
           </div>
           <div class="card-body">
-            <form [formGroup]="register" (ngSubmit)="onSubmit()">
+            <form [formGroup]="updateForm" (ngSubmit)="onSubmit()">
               <div class="row">
                 <div class="col-md-5">
                   <div class="form-group">
@@ -147,7 +147,7 @@
                 type="submit"
                 class="btn btn-rose pull-right"
               >
-                Crear
+                Actualizar
               </button>
               <div class="clearfix"></div>
             </form>

@@ -1,4 +1,4 @@
-export class CreateEvent {
+export class CreateEventModel {
     eventTypeId: number;
     worldId: number;
     name: string;

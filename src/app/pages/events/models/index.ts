@@ -1,3 +1,3 @@
-export {Event} from './event.model';
-export {CreateEvent} from './create-event.model';
-export {UpdateEvent} from './update-event.model';
+export {ReadEventModel} from './read-event.model';
+export {CreateEventModel} from './create-event.model';
+export {UpdateEventModel} from './update-event.model';
