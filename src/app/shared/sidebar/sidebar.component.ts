@@ -47,6 +47,17 @@ export const ROUTES: RouteInfo[] = [
     ],
   },
   {
+    path: '/accessories',
+    title: 'Accesorios',
+    type: 'sub',
+    icontype: 'dashboard',
+    collapse: 'accessories',
+    children: [
+      {path: 'accessorie-list', title: 'Lista', ab: 'L'},
+      {path: 'accessorie-create', title: 'Crear Accesorio', ab: 'CA'},
+    ],
+  },
+  {
     path: '/dashboard',
     title: 'Dashboard',
     type: 'link',

@@ -30,6 +30,11 @@ export const AppRoutes: Routes = [
         loadChildren: './pages/events/events.module#EventsModule',
       },
       {
+        path: 'accessories',
+        loadChildren:
+          './pages/accessories/accessories.module#AccessoriesModule',
+      },
+      {
         path: '',
         loadChildren: './pages/timeline/timeline.module#TimelineModule',
       },
