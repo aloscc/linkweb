@@ -1,0 +1,84 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header card-header-icon card-header-rose">
+            <div class="card-icon">
+              <i class="material-icons">perm_identity</i>
+            </div>
+            <h4 class="card-title">
+              Crear Accesorio -
+            </h4>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="updateForm" (ngSubmit)="onSubmit()">
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Accessory Type</label>
+                    <input
+                      formControlName="accessoryTypeId"
+                      type="number"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Name</label>
+                    <input
+                      formControlName="name"
+                      type="text"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Imagen Url</label>
+                    <input
+                      formControlName="imageUrl"
+                      type="text"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">AssetBundle Url</label>
+                    <input
+                      formControlName="assetBundleUrl"
+                      type="text"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Genre</label>
+                    <input
+                      formControlName="genre"
+                      type="number"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+              <button
+                mat-raised-button
+                type="submit"
+                class="btn btn-rose pull-right"
+              >
+                Crear
+              </button>
+              <div class="clearfix"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -45,19 +45,7 @@ export class UserUpdateComponent implements OnInit {
       this.userId = id;
       this.usersService.getUser(id).subscribe(({data}) => {
         this.objCompare = new ObjectCompare({...data});
-        this.updateForm.patchValue({
-          roleId: data.roleId,
-          companyId: data.companyId,
-          username: data.username,
-          password: data.password,
-          name: data.name,
-          lastName: data.lastName,
-          email: data.email,
-          phone: data.phone,
-          photo: data.photo,
-          position: data.position,
-          bio: data.bio,
-        });
+        this.updateForm.patchValue({...data});
       });
     });
   }

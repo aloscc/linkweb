@@ -1,16 +1,16 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {AccessorieCreateComponent} from './accessorie-create/accessorie-create.component';
-import {AccessorieUpdateComponent} from './accessorie-update/accessorie-update.component';
-import {AccessorieListComponent} from './accessorie-list/accessorie-list.component';
+import {AccessoryCreateComponent} from './accessory-create/accessory-create.component';
+import {AccessoryUpdateComponent} from './accessory-update/accessory-update.component';
+import {AccessoryListComponent} from './accessory-list/accessory-list.component';
 
 const routes: Routes = [
   {
     path: '',
     children: [
       {
-        path: 'accessorie/:id',
-        component: AccessorieUpdateComponent,
+        path: 'accessory/:id',
+        component: AccessoryUpdateComponent,
       },
     ],
   },
@@ -18,8 +18,8 @@ const routes: Routes = [
     path: '',
     children: [
       {
-        path: 'accessorie-list',
-        component: AccessorieListComponent,
+        path: 'accessory-list',
+        component: AccessoryListComponent,
       },
     ],
   },
@@ -27,8 +27,8 @@ const routes: Routes = [
     path: '',
     children: [
       {
-        path: 'accessorie-create',
-        component: AccessorieCreateComponent,
+        path: 'accessory-create',
+        component: AccessoryCreateComponent,
       },
     ],
   },

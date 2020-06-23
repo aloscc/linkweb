@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {CreateAccessorie, UpdateAccessorie, ReadAccessorie} from './models/';
+import {CreateAccessory, UpdateAccessory, ReadAccessory} from './models/';
 import {environment} from '../../../environments/environment';
 import {Observable} from 'rxjs';
 
@@ -17,26 +17,26 @@ export class AccessoriesService {
     return this.http.get(`${baseUrl}/accessories`);
   }
 
-  getAccessorie(accessorieId: number): Observable<any> {
-    return this.http.get(`${baseUrl}/accessories/${accessorieId}`);
+  getAccessory(accessoryId: number): Observable<any> {
+    return this.http.get(`${baseUrl}/accessories/${accessoryId}`);
   }
 
-  createAccessorie(accessorie: CreateAccessorie): Observable<any> {
-    return this.http.post(`${baseUrl}/accessories/`, accessorie, httpOptions);
+  createAccessory(accessory: CreateAccessory): Observable<any> {
+    return this.http.post(`${baseUrl}/accessories/`, accessory, httpOptions);
   }
 
-  udpateAccessorie(
-    accessorieId: number,
-    accessorie: Partial<UpdateAccessorie>,
+  updateAccessory(
+    accessoryId: number,
+    accessory: Partial<UpdateAccessory>,
   ): Observable<any> {
     return this.http.patch(
-      `${baseUrl}/accessories/${accessorieId}`,
-      accessorie,
+      `${baseUrl}/accessories/${accessoryId}`,
+      accessory,
       httpOptions,
     );
   }
 
-  deleteAccessorie(accessorieId: number): Observable<any> {
-    return this.http.delete(`${baseUrl}/accessories/${accessorieId}`);
+  deleteAccessory(accessoryId: number): Observable<any> {
+    return this.http.delete(`${baseUrl}/accessories/${accessoryId}`);
   }
 }

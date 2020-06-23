@@ -1,3 +1,3 @@
-export * from './create-accessorie';
-export * from './update-accessorie';
-export * from './read-accessorie';
+export * from './create-accessory';
+export * from './update-accessory';
+export * from './read-accessory';
