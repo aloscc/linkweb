@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import PerfectScrollbar from 'perfect-scrollbar';
+import {TokenStorageService} from '../../core/auth/token-storage.service';
+import {Router, ActivatedRoute} from '@angular/router';
 
 declare const $: any;
 
@@ -144,6 +146,10 @@ export const ROUTES: RouteInfo[] = [
 export class SidebarComponent implements OnInit {
   public menuItems: any[];
   ps: any;
+  constructor(
+    private tokenStorage: TokenStorageService,
+    private router: Router,
+  ) {}
   isMobileMenu() {
     if ($(window).width() > 991) {
       return false;
@@ -174,5 +180,10 @@ export class SidebarComponent implements OnInit {
       bool = true;
     }
     return bool;
+  }
+
+  logout() {
+    this.tokenStorage.signOut();
+    this.router.navigate(['/login']);
   }
 }

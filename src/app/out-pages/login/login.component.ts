@@ -69,8 +69,8 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   onSubmit() {
     this.authService.login(this.form).subscribe(
-      data => {
-        this.tokenStorage.saveToken(data.data.token);
+      ({data}) => {
+        this.tokenStorage.saveToken(data.access_token);
         // this.tokenStorage.saveUser(data);
 
         this.router.navigate(['/dashboard']);

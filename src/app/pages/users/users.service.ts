@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {CreateUserDto, UpdateUserDto, ReadUserDto} from './dto/';
+import {CreateUserModel, UpdateUserModel, ReadUserModel} from './models/';
 import {environment} from '../../../environments/environment';
 import {Observable} from 'rxjs';
 
@@ -22,11 +22,11 @@ export class UsersService {
     return this.http.get(`${baseUrl}/users/${userId}`);
   }
 
-  createUser(user: CreateUserDto): Observable<any> {
+  createUser(user: CreateUserModel): Observable<any> {
     return this.http.post(`${baseUrl}/auth/signup`, user, httpOptions);
   }
 
-  udpateUser(userId: number, user: Partial<UpdateUserDto>): Observable<any> {
+  udpateUser(userId: number, user: Partial<UpdateUserModel>): Observable<any> {
     return this.http.patch(`${baseUrl}/users/${userId}`, user, httpOptions);
   }
 
