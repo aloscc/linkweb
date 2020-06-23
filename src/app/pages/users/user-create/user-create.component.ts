@@ -1,15 +1,15 @@
 import {Component, OnInit} from '@angular/core';
 import {UsersService} from '../users.service';
-import {CreateUserDto} from '../dto/create-user.dto';
+import {CreateUserModel} from '../models/create-user.model';
 import {ObjectCompare} from '../../../core/helpers/object-compare';
-import {FormBuilder, FormGroup,} from '@angular/forms';
+import {FormBuilder, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-user-cmp',
   templateUrl: 'user-create.component.html',
 })
 export class UserCreateComponent implements OnInit {
-  user = new CreateUserDto();
+  user = new CreateUserModel();
   objCompare: ObjectCompare;
   register: FormGroup;
 

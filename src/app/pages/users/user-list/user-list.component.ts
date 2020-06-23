@@ -5,7 +5,6 @@ import {
   ChangeDetectorRef,
 } from '@angular/core';
 import {UsersService} from '../users.service';
-import {User} from '../../../core/models/user';
 
 declare interface DataTable {
   headerRow: string[];
@@ -21,7 +20,6 @@ declare const $: any;
   styleUrls: ['./user-list.component.css'],
 })
 export class UserListComponent implements OnInit {
-  users: User[];
   public dataTable: DataTable = {
     headerRow: [
       'ID',
@@ -54,8 +52,7 @@ export class UserListComponent implements OnInit {
 
   ngOnInit(): void {
     this.usersService.getUsers().subscribe(({data}) => {
-      this.users = data;
-      this.dataTable.dataRows = [...this.users];
+      this.dataTable.dataRows = [...data];
       this.chRef.detectChanges();
       this.initializeTable();
     });
@@ -82,17 +79,7 @@ export class UserListComponent implements OnInit {
       if ($($tr).hasClass('child')) {
         $tr = $tr.prev('.parent');
       }
-
-      var data = table.row($tr).data();
-      alert(
-        'You press on Row: ' +
-          data[0] +
-          ' ' +
-          data[1] +
-          ' ' +
-          data[2] +
-          "'s row.",
-      );
+      const data = table.row($tr).data();
       e.preventDefault();
     });
 

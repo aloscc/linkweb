@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {UsersService} from '../users.service';
-import {UpdateUserDto} from '../dto/update-user.dto';
+import {UpdateUserModel} from '../models/update-user.model';
 import {ObjectCompare} from '../../../core/helpers/object-compare';
 import {
   FormControl,
@@ -76,7 +76,7 @@ export class UserUpdateComponent implements OnInit {
   }
 
   onSubmit() {
-    const updateUser: Partial<UpdateUserDto> = this.objCompare.getObjectDiference(
+    const updateUser: Partial<UpdateUserModel> = this.objCompare.getObjectDiference(
       this.updateForm.value,
     );
     this.usersService.udpateUser(this.userId, updateUser).subscribe(data => {});

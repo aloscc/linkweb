@@ -3,7 +3,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {environment} from '../../../environments/environment';
 import {Credentials} from '../interfaces/credentials.interface';
-import {User} from '../models/user';
+import {SignupModel} from '../models/signup.model';
 
 const baseUrl = `${environment.baseUrl}/auth/`;
 const httpOptions = {
@@ -20,7 +20,7 @@ export class AuthService {
     return this.http.post(baseUrl + 'signin', credentials, httpOptions);
   }
 
-  register(user: User): Observable<any> {
-    return this.http.post(baseUrl + 'signup', user, httpOptions);
+  register(signup: SignupModel): Observable<any> {
+    return this.http.post(baseUrl + 'signup', signup, httpOptions);
   }
 }

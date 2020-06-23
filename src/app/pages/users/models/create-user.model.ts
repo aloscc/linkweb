@@ -1,4 +1,4 @@
-export class ReadUserDto {
+export class CreateUserModel {
   constructor(
     public roleId: number = 0,
     public companyId: number = 0,

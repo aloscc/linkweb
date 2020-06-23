@@ -1,4 +1,4 @@
-export class UpdateUserDto {
+export class ReadUserModel {
   constructor(
     public roleId: number = 0,
     public companyId: number = 0,
