@@ -9,5 +9,6 @@ export class ProfileDto {
     public phone: string = '',
     public username: string = '',
     public password: string = '',
+    public bio: string = '',
   ) {}
 }
