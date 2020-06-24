@@ -2,7 +2,7 @@ import {Component, OnInit, ElementRef, OnDestroy} from '@angular/core';
 import {AuthService} from '../../core/auth/auth.service';
 import {TokenStorageService} from '../../core/auth/token-storage.service';
 import {Credentials} from '../../core/interfaces/credentials.interface';
-import {Router, ActivatedRoute} from '@angular/router';
+import {Router} from '@angular/router';
 
 declare const $: any;
 
