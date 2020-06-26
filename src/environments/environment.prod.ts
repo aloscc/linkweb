@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseUrl: 'https://linkroom-backend-n.herokuapp.com',
+  baseUrl: 'http://ec2-52-91-125-100.compute-1.amazonaws.com:3000',
 };
